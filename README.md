@@ -4,10 +4,10 @@
 | alimk@kth.se |
 
 
-<img src="https://ali.mk/assets/images/KTH_logo.png" alt="KTH Logo" style="max-width: 300px; height: auto; margin-right: 10px;">
-  <img src="https://ali.mk/assets/images/KTH_logo.png" alt="e-LADDA Logo" style="max-width: 300px; height: auto;">
+<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-width: 50px; height: auto; margin-right: 10px;">
+  <img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-width: 50px; height: auto;">
 
-![KTH Royal Institute of Technology - Logo](https://ali.mk/assets/images/KTH_logo.png)
+![KTH Royal Institute of Technology - Logo](https://ali.mk/assets/images/new-kth-logo.png)
 
 ![](https://ali.mk/assets/images/eLADDA_logo.png)
 
