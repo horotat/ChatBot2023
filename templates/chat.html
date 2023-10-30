@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="logos">
+                <!-- add 3 logos -->
+                <img src="/static/images/logo2.svg" alt="EU Flag">
+                <img src="/static/images/logo3.svg" alt="EU Flag">
+                <img src="/static/images/logo1.svg" alt="EU Flag">
+              </div>
+            {% if session['user'] %}
+            <button disabled class="btn btn--secondary navbar-btn" style="text-transform: none; background: none; cursor: default;">{{ session['user']['name'] }}</span>
+            {% endif %} 
+            <button class="btn btn--secondary navbar-btn" name="help" onclick="showContacts()">Help</button>
+            <button class="btn btn--secondary navbar-btn" name="guide" onclick="showGuide()">Guide</button>
+        </nav>
+     </div>
+
+    <div class="row">
+        <div class="col-md-10 mr-auto ml-auto">
+    <!-- <h1>Pythonscholar ChatBot</h1> -->
+    <form>
+        <div id="chatbox">
+            <div class="col-md-8 ml-auto mr-auto">
+                <p class="botText"><span>{{initial_message}}</span></p>
+            </div>
+        </div>
+        <div id="userInput" class="row">
+            <div class="col-md-10">
+                <input id="text" type="text" name="msg" placeholder="Message (max 250 characters)" class="form-control" maxlength="250" onpaste="return false;" ondrop="return false;" autocomplete="off">
+                <button type="submit" id="send" class="btn btn-warning">Send</button>
+                <form>
+                    <a href=# id=test><button class='btn btn-good'>&#128077; (g)</button></a>
+                </form>
+                <form>
+                    <a href=# id=test2><button class='btn btn-bad'>&#128078; (b)</button></a>
+                </form>
+            </div>
+        </div>
+    </form>
+</div>
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("form").on("submit", function(event) {
+            setDisabled()
+            var rawText = $("#text").val();
+            addProgress(rawText.length)
+            var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+            $("#text").val("");
+            $("#chatbox").append(userHtml);
+            document.getElementById("userInput").scrollIntoView({
+                block: "start",
+                behavior: "smooth",
+            });
+            var correction = "0"
+            $.ajax({
+                data: {
+                    msg: rawText,
+                },
+                type: "POST",
+                url: "/chat/get",
+            }).done(function(data) {
+                correction = data["corr"]
+                if (correction === "1") {
+                document.addEventListener('keydown', myClick);
+                showButtons();}
+                setEnabled()
+                correction = "0"
+                var botHtml = '<p class="botText"><span>' + data["data"] + "</span></p>";
+                $("#chatbox").append($.parseHTML(botHtml));
+                document.getElementById("userInput").scrollIntoView({
+                    block: "start",
+                    behavior: "smooth",
+                });
+            });
+            event.preventDefault();
+
+
+
+
+
+});
+
+
+        });
+</script>
+
+
+<script type=text/javascript>
+        $(function () {
+          $('a#test').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/chat/rate_good',
+                function(data) {
+            });
+            hideButtons()
+              setEnabled()
+            document.getElementById("text").focus()
+            return false;
+          });
+        });
+</script>
+
+<script type=text/javascript>
+        $(function () {
+          $('a#test2').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/chat/rate_bad',
+                function(data) {
+            });
+            hideButtons()
+              setEnabled()
+              document.getElementById("text").focus()
+            return false;
+          });
+        });
+</script>
+
+<script type=text/javascript>
+    document.getElementById("test").hidden = true;
+    document.getElementById("test2").hidden = true;
+    document.getElementById("text").focus();
+
+    async function myClick(event) {
+        if (event.key === "g") {
+            $.getJSON('/chat/rate_good',
+                function (data) {
+                });
+            event.preventDefault()
+            document.removeEventListener('keydown', myClick);
+            await hideButtons()
+            await setEnabled()
+            document.getElementById("text").focus()
+
+
+        } else if (event.key === "b") {
+            $.getJSON('/chat/rate_bad',
+                function (data) {
+                });
+
+            event.preventDefault()
+            document.removeEventListener('keydown', myClick);
+            await hideButtons()
+            await setEnabled()
+            document.getElementById("text").focus()
+
+        }
+
+    }
+
+
+
+</script>
+
+<script type=text/javascript>
+    async function hideButtons() {
+        document.getElementById("test").hidden = true;
+        document.getElementById("test2").hidden = true;
+        document.getElementById("send").hidden = false;
+        document.getElementById("text").style.visibility= "visible";
+        document.getElementById("text").focus();
+
+    }
+    function showButtons() {
+        document.getElementById("test").hidden = false;
+        document.getElementById("test2").hidden = false;
+        document.getElementById("send").hidden = true;
+        document.getElementById("text").style.visibility= "hidden";
+        document.getElementById('text').disabled = true;
+
+    }
+
+    async function setEnabled() {
+
+        document.getElementById('text').disabled = false;
+        document.getElementById("text").focus();
+
+    }
+    async function setDisabled() {
+
+        document.getElementById('text').disabled = true;
+
+    }
+    var width = 0;
+    function addProgress(char) {
+
+        var elem = document.getElementById("myBar");
+        var new_progress = (width/500)* {{chargoal}} + char
+        width = new_progress*(500/{{chargoal}})
+        elem.style.width = width + "px"
+        //elem.style.width = new_progress*(300/500) + "px"
+    }
+
+</script>
+
+<script>
+    function showContacts() {
+      alert("If you need help, please contact us at:\nEmail: e-ladda@kth.se\nPhone: +46 8 790 92 69");
+    }
+
+    function showGuide() {
+      alert("Instructions:\n\t1. Click on the 'Chat' button to start the conversation.\n\t2. Type your message and press Enter to send it.\n\t3. Wait for the bot to respond.\n\t4. Rate the bot's answer as 'good' or 'bad' by pressing G or B on your keyboard.\n\t5. The conversation is done when the progress bar is full.");
+    }
+  </script>
+
+</body>
+
+</html>

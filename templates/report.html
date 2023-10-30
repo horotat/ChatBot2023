@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- No need to categorize errors. We need to import all errors in a var, together with what was supposed to be the correction 
+
+Error needs to have this structure:
+ ‘ error_# ’ : {
+	‘ text ‘ : “txt”,
+	‘ wrong word_# ‘ : “wrong word”,
+	‘ correct word_# ‘ : “correct word”,
+	‘ formatted_txt ‘ : “ formatted_txt”
+ }  
+session['user']['name']
+formatted_txt = txt that has html/css formatting. 
+Eg: txt = Today I go home and ate pasta.
+"Go" is wrong, we need "went": formatted_txt = Today I <span class="wrong">go</span><span class="correct">went</span> home and ate pasta. -->
+
+<div class="card-wrapper">
+    <div class="card report-card">
+        <h1 class="center"> {{ session['user']['name'] }}, these are your mistakes</h1>
+        <div>
+            {% if errors != {} %}
+                {% if corrective_fb != {} %}
+                <strong class="center">These are the correct ways to say some things you said:</strong><br>
+                <ul>
+                    {% for value in corrective_fb.values() %}
+                        <li class="report">
+                            {{ value.html_correction|safe}}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if informative_fb != {} %}
+                <strong class="center">These are some things you said that are not correct:</strong><br>
+                <ul>
+                    {% for value in informative_fb.values() %}
+                        <li class="report">
+                            {{ value.html_correction|safe}}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% if combined_fb != {} %}
+                <strong class="center">These are some things you said that are not correct, and here are the correct ways to say them:</strong><br>
+                <ul>
+                    {% for value in combined_fb.values() %}
+                        <li class="report">
+                            {{ value.html_correction|safe}}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            {% else %}
+            <div class="eport">
+                <p> Well done! There's nothing to review. See you next time!</p>
+            </div>
+            {% endif %}
+        </div><br>
+        <div class="center">
+            <a href="/dashboard/" class="btn btn--secondary">Dashboard</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

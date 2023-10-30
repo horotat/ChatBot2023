@@ -1,0 +1,304 @@
+/* General style */
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: black;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+h3 {
+    color: black;
+    font-size: 20px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+/* Layout */ 
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.ml-auto{
+    margin-left:auto !important;
+}
+.mr-auto{
+    margin-right:auto !important;
+}
+
+.col-md-10,.col-md-8,.col-md-4{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+}
+.col-md-8{flex:0 0 66.666667%;max-width:66.666667%}
+.col-md-4{flex:0 0 33.333333%;max-width:33.333333%}
+.col-md-10{flex:0 0 83.333333%;max-width:83.333333%}
+
+/* Forms */
+
+.form-control {
+    background: no-repeat bottom,50% calc(100% - 1px);
+    background-image: none, none;
+    background-size: auto, auto;
+    background-size: 0 100%,100% 100%;
+    border: 0;
+    height: 36px;
+    transition: background 0s ease-out;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .4375rem 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    border:none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border-bottom: 1px solid #d2d2d2;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+#chatbox {
+    background-color: #f6f6f6;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    min-height: 70px;
+    margin-top: 60px;
+}
+
+/* Buttons */ 
+
+.btn {
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .46875rem 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    line-height: 1.5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #0E6EFB;
+    border-color: #0E6EFB;
+    font-family: sans-serif;
+}
+.btn.btn-warning:active, .btn.btn-warning:focus, .btn.btn-warning:hover {
+    box-shadow: 0 14px 26px -12px rgba(255,152,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(255,152,0,.2);
+}
+.btn-good {
+    color: #fff;
+    background-color: #008000;
+    border-color: #008000;
+    margin:auto;
+    display:block;
+}
+.btn.btn-good:active, .btn.btn-warning:focus, .btn.btn-warning:hover {
+    box-shadow: 0 14px 26px -12px rgba(255,152,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(255,152,0,.2);
+}
+.btn-bad {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+    margin:auto;
+    display: block;
+}
+.btn.btn-bad:active, .btn.btn-warning:focus, .btn.btn-warning:hover {
+    box-shadow: 0 14px 26px -12px rgba(255,152,0,.42),0 4px 23px 0 rgba(0,0,0,.12),0 8px 10px -5px rgba(255,152,0,.2);
+}
+
+.feedback-btns {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    display: inline-block;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    overflow:visible;
+    border-radius: 8px;
+}
+
+#send {
+    text-align: center;
+    margin: 34px auto 24px;   
+    padding: 11px 30px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* User Input */
+
+#userInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 60px;
+}
+
+#textInput {
+    width: 87%;
+    border: none;
+    border-bottom: 3px solid #009688;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+#buttonInput {
+    padding: 3px;
+    font-family: sans-serif;
+    font-size: 17px;
+}
+
+.userText {
+    color: black;
+    font-family: sans-serif;
+    font-size: 17px;
+    text-align: right !important;
+    line-height: 30px;
+    margin: 5px;
+}
+
+.userText span {
+    background-color: #b8d2f2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Bot output */
+
+.botText {
+    color: black;
+    font-family: sans-serif;
+    font-size: 17px;
+    text-align: left;
+    line-height: 30px;
+    margin: 15px;
+}
+
+.botText span {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#tidbit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+}
+
+/* Mistakes */
+
+span.wrong {
+    color: red;
+    text-decoration: line-through;
+    background-color: none;
+    padding: 0 3px;
+}
+
+span.correct {
+    color: green;
+    background-color: none;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+/* Progress Bar */
+
+#myProgress {
+
+position: center;
+
+  width: 500px;
+  background-color: #ddd;
+}
+
+#myBar {
+   position: center;
+  width: 0;
+  height: 30px;
+  background-color: #04AA6D;
+}
+
+/* Navbar */ 
+
+.navbar {
+    margin: 40px 40px;
+    text-align: right;
+    right:0;
+    position: relative;
+  }
+
+.navbar-btn {
+    margin: 0 0 24px;
+    padding: 11px 30px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #263238;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    background: #e2e2e2;
+    transition: color .15s ease, background-color .15s ease;
+  }
+  
+.navbar-btn:hover {
+    background: #B0BEC5;
+  }
+
+  /* navbar logos left, put them on the left of navbar and let the buttons be on the right */
+  .navbar .logos {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }

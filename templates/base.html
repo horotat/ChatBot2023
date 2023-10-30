@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/normalize.css">
+  </head>
+
+<body>
+
+  <div class="header">
+    <nav class="navbar">
+      <!-- Here we add three logos to the left side of the navbar -->
+      <div class="logos">
+        <!-- add 3 logos -->
+        <img src="/static/images/logo2.svg" alt="EU Flag">
+        <img src="/static/images/logo3.svg" alt="EU Flag">
+        <img src="/static/images/logo1.svg" alt="EU Flag">
+      </div>
+      {% if session['user'] %}
+      <button disabled class="btn btn--secondary navbar-btn" style="text-transform: none; background: none; cursor: default;">{{ session['user']['name'] }}</span>
+      {% endif %} 
+      <button class="btn btn--secondary navbar-btn" name="help" onclick="showContacts()">Help</button>
+      <button class="btn btn--secondary navbar-btn" name="guide" onclick="showGuide()">Guide</button>
+      {% if session['user'] %}
+        <a href="/profile/" class="btn btn--secondary navbar-btn">Your Profile</a>
+        <a href="/user/signout" class="btn btn--secondary navbar-btn">Sign out</a>
+      {% endif %}
+    </nav>
+ </div>
+
+  {% block content %}
+  {# Template inserted here #}
+  {% endblock %}
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/static/js/scripts.js"></script>
+  <script>
+    function showContacts() {
+      alert("If you need help, please contact us at:\nEmail: e-ladda@kth.se\nPhone: +46 8 790 92 69");
+    }
+
+    function showGuide() {
+      alert("Instructions:\n\t1. Click on the 'Chat' button to start the conversation.\n\t2. Type your message and press Enter to send it.\n\t3. Wait for the bot to respond.\n\t4. Rate the bot's answer as 'good' or 'bad' by pressing G or B on your keyboard.\n\t5. The conversation is done when the progress bar is full.");
+    }
+  </script>
+  
+</body>
+</html>    

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card-wrapper">
+
+    <div class="card">
+
+        <h1 class="center">Your Profile</h1>
+        <p class="center">
+            <strong class="center">Name:</strong> {{ user['name'] }}<br>
+            <strong class="center">Age:</strong> {{ user['demographics']['age']}}<br>
+            <strong class="center">Gender:</strong> {{ user['demographics']['gender']}}<br>
+            <strong class="center">Level of English:</strong> {{ user['demographics']['level']}}<br>
+            <strong class="center">Native Language:</strong> {{ user['demographics']['native']}}<br>
+            <strong class="center">Education Level:</strong> {{ user['demographics']['education']}}<br>
+            <strong class="center">Field of Study:</strong> {{ user['demographics']['study_field']}}<br>
+        </p>
+        <div class="center">
+            <a href="/profile/edit" class="btn btn--secondary">Edit Profile</a>
+            <a href="/dashboard/" id="dash" class="btn btn--secondary">Dashboard</a>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}
+
+<!-- To add to webapp.py, in case: 
+    
+@app.route("/your_profile/")
+@login_required
+def profile():
+    return render_template("view_profile.html")
+
+@app.route("/edit_profile/", methods=['GET', 'POST'])
+@login_required
+def edit_profile():
+    return render_template("profile.html")
+
+-->

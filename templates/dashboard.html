@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- &#128274; ascii for lock -->
+<!-- &#9989; ascii for checkmark-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+   /* write js function that sends back value to make sure that user has clicked on button. if so, chat page is accessed */
+
+   $(document).ready(function(){
+      $("#chat").click(function(){
+         $.ajax({
+            type: "POST",
+            url: "/dashboard/start/",
+            data: {},
+            success: function(data){
+               console.log(data);
+               window.location.href = "/start/";
+            }
+         });
+      });
+   });
+
+</script>
+
+      <div class="card-wrapper">
+     
+         <div class="card">
+
+            <h1 class="center">Dashboard</h1>
+            <p class="center">You are currently logged in.</p>
+            <p>Please consider:
+               <ul>
+                  <li>Preferred devices are Computers or Tablets (large screen devices.) (mobile is not tested in the development. It probably works well but there might be more bugs when usign the phone.)</li>
+                  <li>Use a private device. If you use a public device, please use incognito tab on the browser and logout from the system after the chat session.</li>
+                  <li>The test goes on for 4 weeks. Each week you have 3 chat sessions to do.<br> Please consider that each day you can do a maximum of 1 session. Therefore if you have not done the first session of a week by the end of Friday of that week, then you will not be able to complete the week (because there will not be enough days left.)</li>
+                  <li>The systems knows you in general but does not remember your previous chats.</li>
+                  <li>The system is not 100% correct. If you have doubt anywhere about the corrections or if you doubt on a point that Alex says, you are welcome to ask your professor about it. (It will also help us if you could share with us a screenshot and description of what has not gone well)</li>
+                  <li>Do not share personal information with the bot. The chat logs are accessible by the researchers and developers of the project for improvement of the systems. Therefore do not share any sensitive personal information with the bot.</li>
+               </ul>
+            </p>
+
+            <div class="center sessions-board">
+               <h2 class="center">Your Sessions</h2>
+
+            {% if todo != "" %}
+            <div>
+               <h3 class="center">Week 1</h3>
+               <div>
+                  <strong>[2022-11-21]</strong>
+                  {% for chat in week_1 %}
+                     {% if week_1[chat]['completion']['status'] == 'done' %}
+                        <button class="btn btn--secondary done" disabled>&#9989;</button>
+                     {% elif week_1[chat]['completion']['status'] == 'locked' %}
+                        <button class="btn btn--secondary locked" disabled>&#128274;</button>
+                     {% else %}
+                        {% if today >= start_dates[0] and chat_allowed %}
+                           <button id="chat" type="submit" formaction="/start/" formmethod="get" class="btn btn--secondary todo">Chat</button>
+                        {% else %}
+                           <button class="btn btn--secondary todo--disabled" disabled>Chat</button>
+                        {% endif %}                     
+                     {% endif %}
+                  {% endfor %}
+                  <strong>[2022-11-27]</strong>
+               </div>
+            </div>
+            <div>
+               <h3 class="center">Week 2</h3>
+               <div>
+                  <strong>[2022-11-28]</strong>
+                  {% for chat in week_2 %}
+                     {% if week_2[chat]['completion']['status'] == 'done' %}
+                        <button class="btn btn--secondary done" disabled>&#9989;</button>
+                     {% elif week_2[chat]['completion']['status'] == 'locked' %}
+                        <button class="btn btn--secondary locked" disabled>&#128274;</button>
+                     {% else %}
+                        {% if today >= start_dates[1] and chat_allowed %}
+                           <button id="chat" type="submit" formaction="/start/" formmethod="get" class="btn btn--secondary todo">Chat</button>
+                        {% else %}
+                           <button class="btn btn--secondary todo--disabled" disabled>Chat</button>
+                        {% endif %}
+                     {% endif %}
+                  {% endfor %}
+                  <strong>[2022-12-04]</strong>
+               </div>
+            </div>
+            <div>
+               <h3 class="center">Week 3</h3>
+               <div>
+                  <strong>[2022-12-05]</strong>
+                  {% for chat in week_3 %}
+                     {% if week_3[chat]['completion']['status'] == 'done' %}
+                        <button class="btn btn--secondary done" disabled>&#9989;</button>
+                     {% elif week_3[chat]['completion']['status'] == 'locked' %}
+                        <button class="btn btn--secondary locked" disabled>&#128274;</button>
+                     {% else %}
+                        {% if today >= start_dates[2] and chat_allowed %}
+                           <button id="chat" type="submit" formaction="/start/" formmethod="get" class="btn btn--secondary todo">Chat</button>
+                        {% else %}
+                           <button class="btn btn--secondary todo--disabled" disabled>Chat</button>
+                        {% endif %}
+                     {% endif %}
+                  {% endfor %}
+                  <strong>[2022-12-11]</strong>
+               </div>
+            </div>
+            <div>
+               <h3 class="center">Week 4</h3>
+               <div>
+                  <strong>[2022-12-12]</strong>
+                  {% for chat in week_4 %}
+                     {% if week_4[chat]['completion']['status'] == 'done' %}
+                        <button class="btn btn--secondary done" disabled>&#9989;</button>
+                     {% elif week_4[chat]['completion']['status'] == 'locked' %}
+                        <button class="btn btn--secondary locked" disabled>&#128274;</button>
+                     {% else %}
+                        {% if today >= start_dates[3] and chat_allowed %}
+                           <button id="chat" type="submit" formaction="/start/" formmethod="get" class="btn btn--secondary todo">Chat</button>
+                        {% else %}
+                           <button class="btn btn--secondary todo--disabled" disabled>Chat</button>
+                        {% endif %}
+                     {% endif %}
+                  {% endfor %}
+                  <strong>[2022-12-18]</strong>
+               </div>
+            </div>
+            {% elif todo == "" and not final_assess %}
+               <div class="center">
+                  <h2>Congratulations! You can now access the final test.</h2>
+                     <a href="/final_assessment/" class="btn btn-primary">Final Assessment</a>
+               </div>
+            {% elif todo == "" and final_assess %}
+               <div class="center">
+                  <h2>Congratulations! You have completed the test.</h2>
+               </div>
+            {% endif %}
+
+            </div>
+         </div>
+      </div>
+
+{% endblock %}

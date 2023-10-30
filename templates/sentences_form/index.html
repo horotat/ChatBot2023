@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>sentences mistakes form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sentences_form/assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sentences_form/assets/bootstrap/css/bootstrap.min.css')}}">
+</head>
+
+<body>
+    <main>
+        <section class="py-4 py-xl-5">
+            <div class="container">
+                <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+                    <div class="pb-2 pb-lg-1">
+                        <h2 class="fw-bold mb-2">Part 2: Correct any errors</h2>
+                        <p class="mb-0">Below is a sample of the responses you made in the conversation. If you find an error in a sentence, write it again in the correct form.&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-md">
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <form action="{{ url_for('get_data') }}" method="post">
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-1" id="lbl1">Sentence 1</label><input class="shadow form-control" type="text" id="sentence-1" name="sen1" placeholder="If the sentence is correct, write it again here without change" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-2" id="lbl2">Sentence 2</label><input class="shadow form-control" type="text" id="sentence-2" name="sen2" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-3" id="lbl3">Sentence 3</label><input class="shadow form-control" type="text" id="sentence-3" name="sen3" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-4" id="lbl4">Sentence 4</label><input class="shadow form-control" type="text" id="sentence-4" name="sen4" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-5" id="lbl5">Sentence 5</label><input class="shadow form-control" type="text" id="sentence-5" name="sen5" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-6" id="lbl6">Sentence 6</label><input class="shadow form-control" type="text" id="sentence-6" name="sen6" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-7" id="lbl7">Sentence 7</label><input class="shadow form-control" type="text" id="sentence-7" name="sen7" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-8" id="lbl8">Sentence 8</label><input class="shadow form-control" type="text" id="sentence-8" name="sen8" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-9" id="lbl9">Sentence 9</label><input class="shadow form-control" type="text" id="sentence-9" name="sen9" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="margin-bottom: 35px;"><label class="form-label" for="sentence-10" id="lbl10">Sentence 10</label><input class="shadow form-control" type="text" id="sentence-10" name="sen10" placeholder="If you believe you made an error, write the correct form of the sentence" autocomplete="off"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col">
+                                    <div>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="attentive_participation" required=""><label class="form-check-label" for="attentive_participation" style="margin-bottom: 35px;border-color: var(--bs-blue);">I have looked through the sentences and written the correct form if I found an error</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div><button class="btn btn-outline-primary btn-lg text-center" type="submit" style="text-align: center;">Submit</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='sentences_form/assets/bootstrap/js/bootstrap.min.js')}}"></script>
+
+
+<script type=text/javascript>
+document.getElementById('lbl1').innerHTML = "Sentence 1: '{{data[0]}}'";
+document.getElementById('lbl2').innerHTML = "Sentence 2: '{{data[1]}}'";
+document.getElementById('lbl3').innerHTML = "Sentence 3: '{{data[2]}}'";
+document.getElementById('lbl4').innerHTML = "Sentence 4: '{{data[3]}}'";
+document.getElementById('lbl5').innerHTML = "Sentence 5: '{{data[4]}}'";
+document.getElementById('lbl6').innerHTML = "Sentence 6: '{{data[5]}}'";
+document.getElementById('lbl7').innerHTML = "Sentence 7: '{{data[6]}}'";
+document.getElementById('lbl8').innerHTML = "Sentence 8: '{{data[7]}}'";
+document.getElementById('lbl9').innerHTML = "Sentence 9: '{{data[8]}}'";
+document.getElementById('lbl10').innerHTML = "Sentence 10: '{{data[9]}}'";
+
+// todo: we deleted a timer here. we might need to add a new one
+
+</script>
+
+</body>
+
+</html>

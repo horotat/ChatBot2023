@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Welcome page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='sentences_form/assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sentences_form/assets/bootstrap/css/bootstrap.min.css')}}">
+</head>
+
+<body>
+    <main>
+        <section class="py-4 py-xl-5">
+            <div class="container">
+                <div class="text-white bg-primary border rounded border-0 border-primary d-flex flex-column justify-content-between flex-lg-row p-4 p-md-5">
+                    <div class="pb-2 pb-lg-1">
+                        <h2 class="fw-bold mb-2">Welcome</h2>
+                        <p class="mb-0">You are going to speak to a artificial conversation partner with the purpose of practicing your English.<br>
+                             The agent will take on a tutoring role and sometimes correct any mistakes you make.<br><br>
+
+                        </p><p>
+
+                            Instructions:
+                        <ul>
+                          <li>The conversational agent is powered by GPT-3. Initially you receive a message from the agent and you need to reply.</li>
+                          <li>Try to respond quickly and intuitively, you are encouraged to not worry about making mistakes</li>
+                          <li>For each reply that you receive from the system, you need to rate the reply with "good" or "bad". For that you push the buttons G or B on your keyboard. You should evaluate the response based on if it is generally adequate and human-like or if you for example find it annoying.</li>
+                            <li>At some points you will be prompted by the agent to start a new conversation. When prompted, press "new conversation" at the bottom of the screen. After that point the agent is not aware of your previous conversation.</li>
+                    </ul></p>
+                        <p>
+                        GDPR
+                        <ul>
+                          <li>The conversation you have with the chatbot is saved. If you do not want real answers from you saved, feel free to answer with an imaginary response.</li>
+                          <li>The saved conversation is anonymized and no personal information about you is saved.</li>
+                        </ul></p>
+                                            </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-md">
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <form action="{{ url_for('chat_page') }}">
+                            <div class="row">
+                                <div class="col">
+                                    <div>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="attentive_participation" required=""><label class="form-check-label" for="attentive_participation" style="margin-bottom: 35px;border-color: var(--bs-blue);">I have read and understood the instructions and agree that my responses are saved and used for research purposes</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div><button class="btn btn-outline-primary btn-lg text-center" type="submit" style="text-align: center;">Submit</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='sentences_form/assets/bootstrap/js/bootstrap.min.js')}}"></script>
+
+</body>
+
+</html>

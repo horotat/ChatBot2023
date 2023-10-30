@@ -1,0 +1,282 @@
+/*
+  Colors: http://getuicolors.com
+*/
+
+/* Setup */
+:root {
+    --black: #000000;
+    --almost-black: #263238;
+    --white: #ffffff;
+    --almost-white: #FBFBFB;
+    --grey-light: #CFD8DC;
+    --grey: #B0BEC5;
+    --grey-medium: #78909C;
+    --grey-dark: #455A64;
+    --primary: #1E88E5;
+    --primary-dark: #1976D2;
+    --secondary: #CFD8DC;
+    --secondary-dark: #B0BEC5;
+    --red: #EF4836;
+  }
+
+  * {
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--black);
+    background: #f6f6f6;
+  }
+  
+  /* Typography */
+  .center {
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0.5em 0 1em;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--almost-black);
+  }
+  
+  h2 {
+    margin: 0.5em 0 1em;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--grey-dark);
+  }
+  
+  p {
+    margin: 24px 0;
+  }
+
+  select {
+    margin: 0 0 24px;
+    padding: 11px 16px 9px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--almost-black);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    display: block;
+    background: var(--almost-white);
+    transition: border-color .15s ease;
+  }
+
+  /* Nav bar */
+
+  .navbar {
+    margin: 40px 40px;
+    text-align: right;
+    right:0;
+    position: relative;
+  }
+
+  /* navbar logos left, put them on the left of navbar and let the buttons be on the right */
+  .navbar .logos {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* Cards */
+  .card-wrapper {
+    margin: auto auto;
+    padding: 60px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .card {
+    margin: 0 30px 60px;
+    padding: 20px 40px;
+    width: 83.3%;
+    box-shadow: 0 8px 26px -4px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    background: var(--white);
+  }
+  
+  .card-homepage {
+    width: 460px;
+  }
+
+  @media only screen and (max-width: 520px) {
+    .card-wrapper {
+      padding: 30px 0 0;
+    }
+  }
+  
+  @media only screen and (max-width: 520px) {
+    .card {
+      margin: 0 0 30px;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  .sessions-board {
+    background: aliceblue;
+    border-radius: 15px;
+    border: ridge;
+  }
+  
+  /* Forms */
+  form {
+    transition: opacity .15s ease;
+  }
+  
+  form.loading {
+    pointer-events: none;
+    opacity: 0.75;
+  }
+  
+  label {
+    margin: 0 0 2px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: var(--grey-medium);
+    display: block;
+  }
+  
+  .field {
+    margin: 0 0 24px;
+    padding: 11px 16px 9px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--almost-black);
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    display: block;
+    background: var(--almost-white);
+    transition: border-color .15s ease;
+  }
+  
+  .field:focus {
+    border-color: var(--grey-medium);
+    outline: none;
+  }
+  
+  .error {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--red);
+  }
+  
+  .error--hidden {
+    display: none;
+  }
+  
+  /* Buttons */
+  .btn {
+    margin: 0 0 24px;
+    padding: 11px 30px 10px;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    background: #0E6EFB;
+    transition: color .15s ease, background-color .15s ease;
+  }
+  
+  .btn:hover {
+    background: var(--primary-dark);
+  }
+  
+  .btn--secondary {
+    color: var(--almost-black);
+    background: #e2e2e2;
+  }
+  
+  .btn--secondary:hover {
+    background: var(--secondary-dark);
+  }
+  
+  input[type=submit] {
+    margin: 34px auto 24px;
+    display: block;
+  }
+
+  input[type=reset] {
+    margin: 34px auto 24px;
+    display: inline-block;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #dash {
+    margin: 34px auto 24px;
+    display: inline-block;
+  }
+
+  #buttons {
+    width: 100%;
+    display: inline-flex;
+  }
+
+  .right {
+    float: right;
+    margin-top: 34px;
+    margin-right: 50px;
+  }
+
+  /* Report card styling */
+
+  .wrong {
+    color: red;
+    text-decoration: line-through;
+    background-color: none;
+  }
+
+  .correct {
+    color: green;
+    background-color: none;
+  }
+
+  .done {
+    background-color: green; 
+    cursor: default;
+  }
+
+  .todo--disabled {
+    background-color: yellow; 
+    cursor: default;
+  }
+
+  .todo {
+    background-color: yellow; 
+  }
+
+  .locked {
+    background-color: grey; 
+    cursor: default;
+  }
+
+  /* Final Assessment */
+
+  .tab {
+    display: none;
+  }

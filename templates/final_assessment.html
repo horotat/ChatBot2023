@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<div class="card-wrapper">
+    <div class="card">
+        <h1 class="center">Final Assessment</h1>
+        <strong>Instructions:</strong>
+        <p>
+        This is the final assessment. You will be presented some sentences, one at a time. If you think there is a mistake in the sentence, please rewrite the sentence with the correction. If you think there is no mistake, please write "no mistake". 
+        </p>
+        {% for sentence in sentences %}
+            <form name="final_assessment">
+                <div class="tab sessions-board">
+                    <strong>Sentence:</strong>
+                    <p class="sentence">{{ sentence }}</p>
+                    <input type="text" name="answer" class="field answer" placeholder="Enter your answer here" autocomplete="off" onpaste="return false;" ondrop="return false;">
+                    <div class="center">
+                        <button type="submit" class="btn" value="submit">Submit</button>
+                    </div> 
+                    <p class="center">{{ sentences.index(sentence)+1 }} / {{ tot+1 }}</p>
+                </div>
+            </form>
+        {% endfor %}
+
+        <p id="end" style="display: none;">You've reached the end of the test. Well done!</p>
+        <a href="/qualitative_assessment/" id="dash" class="btn" style="display:none">Next</a>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        var tabs = document.getElementsByClassName("tab");
+        var currentTab = 0;
+        tabs[currentTab].style.display = "block";
+        $("form").on("submit", function(event) {
+            var sentences = $(".sentence");
+            var answers = $(".answer");
+            sent = sentences[currentTab].innerHTML;
+            answer = answers[currentTab].value;
+            $.getJSON('/final_assessment/get/' + sent + '/' + answer + '/',
+                function(data) {
+                    console.log(data);
+            });
+            tabs[currentTab].style.display = "none";
+            currentTab++;
+            if (currentTab >= tabs.length) {
+                document.getElementById("end").style.display = "block";
+                document.getElementById("dash").style.display = "inline-block";
+                return false;
+            }
+            tabs[currentTab].style.display = "block";
+
+            event.preventDefault();
+        });
+    });
+</script>
+
+
+{% endblock %}

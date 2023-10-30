@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="card-wrapper">
+        <div class="card card-homepage">
+            <h1 class="center">Create An Account!</h1>
+
+            <form name="signup_form">
+                
+                <label for="name">First Name</label>
+                <input type="text" name="name" class="field" placeholder="Sasha" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" class="field" placeholder="email@uhk.cz" required>
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" class="field" placeholder="Password" required>
+                <!-- add a alert description using bootstrap for password field, with reduced space between the input bar above -->
+                <p style="color: red; font-size: 11px; margin-top: 0;">(Store your password somewhere safe. If you forgot your password, send an email to <a href="mailto:e-ladda@kth.se">e-ladda@kth.se</a> to restore your password.)</p>
+
+
+
+                <p class="error error--hidden"></p>
+
+                <input type="submit" value="Sign Up" class="btn">
+            </form>
+        </div>
+
+        <div class="card card-homepage">
+            <h1 class="center">Log In</h1>
+
+            <form name="login_form">
+
+                <label for="email">Email</label>
+                <input type="email" name="email" class="field" placeholder="email@uhk.cz" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" class="field" placeholder="Password" required>
+                <p style="color: red; font-size: 11px; margin-top: 0;">If you forgot your password, email <a href="mailto:e-ladda@kth.se">e-ladda@kth.se</a> to reset your password if you forgot it.</p>
+
+                <p class="error error--hidden"></p>
+
+                <input type="submit" value="Log In" class="btn">
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card-wrapper">
+    <div class="card">
+        <div class="center">
+            <p>
+            <strong>Now please copy this code:</strong><br>
+            <code><strong>{{ session['user']['_id'] }}</strong></code><br>
+            <strong>and click on this link:</strong>
+            <a id="survey" href="https://docs.google.com/forms/d/e/1FAIpQLSdRn9AdUlzblHAU4hn9zSPmukBelogty_kStiVi4FgGl5U-1A/viewform?usp=sf_link" target="_blank">Qualitative Survey</a><br>
+            <strong>Come back here to continue</strong>
+            </p>
+        </div>
+        <div class="center" id="goodbye" style="display: none;">
+            <p>Thank you for participating in our experiment!</p>
+            <a href="/goodbye/" id="continue" class="btn">Bye!</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#goodbye').hidden = true;
+        $('#survey').on('click', function(event) {
+            $('#goodbye').show();
+        });
+    });
+</script>
+
+
+{% endblock %}
