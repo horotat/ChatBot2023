@@ -1,32 +1,12 @@
 # Adaptive Chatbot for English Conversation Practice
 
+<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 120px; width: auto; margin-right: 10px;">
+<img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 120px; width: auto;">
+
 | Alireza M. Kamelabad | |
+| --- | --- |
 | [alimk@kth.se](mailto:alimk@kth.se) | [alimk@ieee.org](mailto:alimk@ieee.org) |
 | [ali.mk](https://ali.mk) | +46 8 790 9269 | 
-
-<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 150px; width: auto; margin-right: 10px;">
-<img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 150px; width: auto;">
-
-<p align="center">
-  <table>
-    <tr>
-      <td align="left">Alireza M. Kamelabad</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td align="left">[alimk@kth.se](mailto:alimk@kth.se)</td>
-      <td align="left">[alimk@ieee.org](mailto:alimk@ieee.org)</td>
-    </tr>
-    <tr>
-      <td align="left">[ali.mk](https://ali.mk)</td>
-      <td align="left">+46 8 790 9269</td>
-    </tr>
-  </table>
-  <img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 150px; width: auto; margin-right: 10px;">
-  <img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 150px; width: auto;">
-</p>
-
-
 
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
 
