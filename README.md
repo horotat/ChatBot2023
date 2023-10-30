@@ -1,6 +1,17 @@
 # Adaptive Chatbot for English Conversation Practice
 
-If you got problems anywhere in the process, please contact me.
+> If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
+{: .prompt}
+
+## Repository
+
+Access the code here: [`/horotat/ChatBot2023`](https://github.com/horotat/ChatBot2023)
+
+or
+
+```bash
+git clone https://github.com/horotat/ChatBot2023.git
+```
 
 ## Installation
 
