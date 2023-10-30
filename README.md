@@ -5,15 +5,15 @@
 
 | Alireza M. Kamelabad | |
 | --- | --- |
-| [alimk@kth.se](mailto:alimk@kth.se) | [alimk@ieee.org](mailto:alimk@ieee.org) |
-| [ali.mk](https://ali.mk) | +46 8 790 9269 | 
+| [ali.mk](https://ali.mk) | [alimk@kth.se](mailto:alimk@kth.se) |
+| +46 8 790 9269 | [alimk@ieee.org](mailto:alimk@ieee.org) | 
 
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
 
 
 ## Repository
 
-Access the code here: [`/horotat/ChatBot2023`](https://github.com/horotat/ChatBot2023)
+Access the code here: [`github.com/horotat/ChatBot2023`](https://github.com/horotat/ChatBot2023)
 
 or
 
