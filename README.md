@@ -1,5 +1,9 @@
 # Adaptive Chatbot for English Conversation Practice
 
+| Alireza Mahmoudi Kamelabad |
+| alimk@kth.se |
+![KTH Royal Institute of Technology - Logo]([https://e-ladda.proj.kth.se/](https://ali.mk/assets/images/new-kth-logo.png))
+
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
 {: .prompt}
 
