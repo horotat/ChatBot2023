@@ -3,13 +3,8 @@
 | Alireza Mahmoudi Kamelabad |
 | alimk@kth.se |
 
-
-<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-width: 50px; height: auto; margin-right: 10px;">
-  <img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-width: 50px; height: auto;">
-
-![KTH Royal Institute of Technology - Logo](https://ali.mk/assets/images/new-kth-logo.png)
-
-![](https://ali.mk/assets/images/eLADDA_logo.png)
+<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 300px; width: auto; margin-right: 10px;">
+<img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 300px; width: auto;">
 
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
 {: .prompt}
