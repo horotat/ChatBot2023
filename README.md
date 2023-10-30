@@ -7,8 +7,9 @@
 <img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 150px; width: auto; margin-right: 10px;">
 <img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 150px; width: auto;">
 
+
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
-{: .prompt}
+
 
 ## Repository
 
