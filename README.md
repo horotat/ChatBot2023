@@ -1,10 +1,11 @@
 # Adaptive Chatbot for English Conversation Practice
 
-| Alireza Mahmoudi Kamelabad |
-| alimk@kth.se |
+| Alireza M. Kamelabad | |
+| [alimk@kth.se](mailto:alimk@kth.se) | [alimk@ieee.org](mailto:alimk@ieee.org) |
+| [ali.mk](https://ali.mk) | | 
 
-<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 300px; width: auto; margin-right: 10px;">
-<img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 300px; width: auto;">
+<img src="https://ali.mk/assets/images/new-kth-logo.png" alt="KTH Logo" style="max-height: 150px; width: auto; margin-right: 10px;">
+<img src="https://ali.mk/assets/images/eLADDA_logo.png" alt="e-LADDA Logo" style="max-height: 150px; width: auto;">
 
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
 {: .prompt}
