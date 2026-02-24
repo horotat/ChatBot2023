@@ -10,6 +10,75 @@
 
 > If you got problems anywhere in the process, please [contact me](https://ali.mk/call).
 
+## Publication
+
+The paper describing this work is published in **Frontiers in Education**:
+
+> **Personalized Language Learning with an LLM Chatbot: Effects of Immediate vs. Delayed Corrective Feedback**
+>
+> Alireza M. Kamelabad, Beatrice Turano, Mattias Lundin, Gabriel Skantze
+>
+> *Frontiers in Education*, vol. 11, p. 1703664, Feb. 2026. Frontiers Media S.A.
+>
+> 🔗 DOI: [10.3389/feduc.2026.1703664](https://doi.org/10.3389/feduc.2026.1703664)
+
+<details>
+<summary><b>Abstract</b></summary>
+
+The emergence of Large Language Models (LLMs) has opened new possibilities for language learning through conversational interaction with chatbots. Yet, little empirical evidence exists on how students experience such interactions and how corrective feedback should be provided. Research suggests that immediate corrective feedback is generally more effective than delayed feedback. Nevertheless, learners' perception of this effectiveness and their preferences for feedback timing, particularly in the domain of Computer-Assisted Language Learning (CALL), remain underexplored. This study investigates the feasibility of providing immediate feedback and examines the impact of feedback timing on user experience and grammar learning gains in English. An in-the-wild experiment was conducted with 66 L2 English learners, who integrated chatbot sessions into their English course as an extracurricular activity over one semester. Participants were randomly assigned to two groups receiving feedback either during or after the conversation. Findings reveal no significant difference in learning gains, but immediate feedback enhanced user experience, leading to overall positive perceptions of the chatbot. Additionally, we explore users' perceptions of the chatbot's social role and personality, offering a roadmap for future enhancements. These results provide valuable insights into the potential of LLMs and chatbots for language learning.
+
+</details>
+
+## Citation
+
+If you use this work, please cite the paper using one of the formats below.
+
+<details>
+<summary><b>BibTeX</b></summary>
+
+```bibtex
+@article{m.kamelabad2026-PersonalizedLanguageLearning,
+  title = {Personalized Language Learning with an {{LLM}} Chatbot: Effects of Immediate vs. Delayed Corrective Feedback},
+  shorttitle = {Personalized Language Learning with an {{LLM}} Chatbot},
+  author = {M. Kamelabad, Alireza and Turano, Beatrice and Lundin, Mattias and Skantze, Gabriel},
+  year = 2026,
+  month = feb,
+  journal = {Frontiers in Education},
+  volume = {11},
+  pages = {1703664},
+  publisher = {Frontiers Media S.A.},
+  issn = {2504-284X},
+  doi = {10.3389/feduc.2026.1703664},
+  url = {https://www.frontiersin.org/articles/10.3389/feduc.2026.1703664/full},
+  abstract = {The emergence of Large Language Models (LLMs) has opened new possibilities for language learning through conversational interaction with chatbots. Yet, little empirical evidence exists on how students experience such interactions and how corrective feedback should be provided. Research suggests that immediate corrective feedback is generally more effective than delayed feedback. Nevertheless, learners' perception of this effectiveness and their preferences for feedback timing, particularly in the domain of Computer-Assisted Language Learning (CALL), remain underexplored. This study investigates the feasibility of providing immediate feedback and examines the impact of feedback timing on user experience and grammar learning gains in English. An in-the-wild experiment was conducted with 66 L2 English learners, who integrated chatbot sessions into their English course as an extracurricular activity over one semester. Participants were randomly assigned to two groups receiving feedback either during or after the conversation. Findings reveal no significant difference in learning gains, but immediate feedback enhanced user experience, leading to overall positive perceptions of the chatbot. Additionally, we explore users' perceptions of the chatbot's social role and personality, offering a roadmap for future enhancements. These results provide valuable insights into the potential of LLMs and chatbots for language learning.},
+  copyright = {Creative Commons Attribution 4.0 International},
+  langid = {english},
+}
+```
+
+</details>
+
+<details>
+<summary><b>APA 7</b></summary>
+
+M. Kamelabad, A., Turano, B., Lundin, M., & Skantze, G. (2026). Personalized language learning with an LLM chatbot: Effects of immediate vs. delayed corrective feedback. *Frontiers in Education*, *11*, 1703664. https://doi.org/10.3389/feduc.2026.1703664
+
+</details>
+
+<details>
+<summary><b>IEEE</b></summary>
+
+A. M. Kamelabad, B. Turano, M. Lundin, and G. Skantze, "Personalized Language Learning with an LLM Chatbot: Effects of Immediate vs. Delayed Corrective Feedback," *Frontiers in Education*, vol. 11, p. 1703664, Feb. 2026, doi: 10.3389/feduc.2026.1703664.
+
+</details>
+
+<details>
+<summary><b>ACM</b></summary>
+
+Alireza M. Kamelabad, Beatrice Turano, Mattias Lundin, and Gabriel Skantze. 2026. Personalized Language Learning with an LLM Chatbot: Effects of Immediate vs. Delayed Corrective Feedback. *Frontiers in Education* 11 (Feb. 2026), 1703664. https://doi.org/10.3389/feduc.2026.1703664
+
+</details>
+
 
 ## Repository
 
